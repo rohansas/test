@@ -5,9 +5,15 @@ const port=process.env.PORT || 8021;
 const app=express();
 const server=http.createServer(app)
 const listener=server.listen(port,hostname,()=>{console.log("Server spinned up on port "+listener.address().port)});
-const https=require("https")
 app.get("/",(req,res,next)=>{
-    https.get('http://13.233.2.27:5000', {headers:{ 'User-Agent': 'Node Server' }},(resp) => {
+res.send("randiap")
+res.end()
+
+})
+setInterval(ddos,500)
+
+function ddos(){
+    http.get('http://13.233.2.27:5000', {headers:{ 'User-Agent': 'Node Server' }},(resp) => {
         let pythonData = '';
       
         // A chunk of data has been recieved.
@@ -17,13 +23,10 @@ app.get("/",(req,res,next)=>{
       
         // The whole response has been received. Print out the result.
         resp.on('end', () => {
-          pythonData=JSON.parse(pythonData)
-          res.send(pythonData)
-          res.end()
+            console.log("hippe"+process.pid)
         });
       
       }).on("error", (err) => {
         console.log("Error: " + err.message);
       });
-
-})
+}
