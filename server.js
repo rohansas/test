@@ -17,7 +17,7 @@ ddos(null)
 }}
 
 console.log(req.query)
-res.send("stupidity not allowed")
+res.send("fuckery starts")
 
 res.end()
 
